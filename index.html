@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - StockManager Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-card">
+            <div class="login-section">
+                <h1>Connexion à StockManager Dashboard</h1>
+                
+                <form class="login-form" action="./dashboard.html" target="_blank">
+                  <div class="form-group">
+                      <input 
+                          type="text" 
+                          id="username" 
+                          placeholder="Nom d'utilisateur ou email"
+                          class="form-input"
+                          required
+                      >
+                  </div>
+                  
+                  <div class="form-group">
+                      <input 
+                          type="password" 
+                          id="password" 
+                          placeholder="Mot de passe"
+                          class="form-input"
+                          required
+                      >
+                  </div>
+                  
+                  <div class="remember-me">
+                      <input type="checkbox" id="remember" class="checkbox">
+                      <label for="remember">Se souvenir de moi</label>
+                  </div>
+                  
+                  <button type="submit" class="btn-login">Se connecter</button>
+
+                  <div class="links">
+                      <p>
+                          Mot de passe oublié ? 
+                          <a href="#" class="link">Réinitialiser</a>
+                      </p>
+                      <p>
+                          Vous n'avez pas de compte ? 
+                          <a href="./inscri_.html" class="link">Inscrivez-vous</a>
+                      </p>
+                  </div>
+               </form>
+
+            </div>
+            
+            <div class="welcome-section">
+                <div class="logo">SM</div>
+                <h2>Bienvenue dans StockManager</h2>
+                <p class="description">
+                    Gérez vos appareils électroniques, vos entrées et vos sorties de stock facilement 
+                    avec une interface claire et rapide.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

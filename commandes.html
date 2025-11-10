@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commandes - StockManager</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <i class="fas fa-chart-line"></i>
+        <h2>Dashboard</h2>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item">
+          <i class="fas fa-table"></i>
+          <span>Tableau de Bord</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <i class="fas fa-chart-bar"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="commandes.html" class="nav-item active">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Commandes</span>
+        </a>
+        <a href="parametres.html" class="nav-item">
+          <i class="fas fa-cog"></i>
+          <span>Paramètres</span>
+        </a>
+        <a href="rapports.html" class="nav-item">
+          <i class="fas fa-file-alt"></i>
+          <span>Rapports</span>
+        </a>
+        <a href="notifications.html" class="nav-item">
+          <i class="fas fa-bell"></i>
+          <span>Notifications</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="user-info">
+            <h4>Administrateur</h4>
+            <p>Gestionnaire</p>
+          </div>
+        </div>
+        <button class="btn-profile">
+          <i class="fas fa-user-circle"></i> Mon Profil
+        </button>
+        <button class="btn-logout">
+          <i class="fas fa-sign-out-alt"></i> Déconnexion
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Gestion de Stock - Produits Électroniques</h1>
+        <div class="header-right">
+          <div class="notification-icon">
+            <i class="fas fa-bell"></i>
+            <span class="badge">3</span>
+          </div>
+          <div class="user-menu">
+            <i class="fas fa-user-circle"></i>
+            <span>Administrateur</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Commandes Content -->
+      <div class="dashboard-content">
+        <div class="section-header">
+          <h2><i class="fas fa-shopping-cart"></i> Gestion des Commandes</h2>
+          <p>Suivi et gestion complète des commandes clients</p>
+        </div>
+
+        <!-- Order Stats -->
+        <div class="stats-grid">
+          <div class="stat-card orange">
+            <div class="stat-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-info">
+              <h3>23</h3>
+              <p>En attente</p>
+            </div>
+          </div>
+
+          <div class="stat-card blue">
+            <div class="stat-icon">
+              <i class="fas fa-cog"></i>
+            </div>
+            <div class="stat-info">
+              <h3>45</h3>
+              <p>En cours</p>
+            </div>
+          </div>
+
+          <div class="stat-card purple">
+            <div class="stat-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="stat-info">
+              <h3>67</h3>
+              <p>Expédiées</p>
+            </div>
+          </div>
+
+          <div class="stat-card green">
+            <div class="stat-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-info">
+              <h3>234</h3>
+              <p>Livrées</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+          <div class="filter-group">
+            <label>Statut :</label>
+            <select class="filter-select">
+              <option>Tous les statuts</option>
+              <option>En attente</option>
+              <option>En cours</option>
+              <option>Expédiées</option>
+              <option>Livrées</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Période :</label>
+            <select class="filter-select">
+              <option>Aujourd'hui</option>
+              <option>Cette semaine</option>
+              <option>Ce mois</option>
+              <option>Personnalisé</option>
+            </select>
+          </div>
+          <div class="search-filter">
+            <input type="text" placeholder="Rechercher une commande..." />
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+
+        <!-- Orders List -->
+        <div class="orders-section">
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-title">
+                <h3>Commande #CMD-2024-001</h3>
+                <span class="order-status pending">En attente</span>
+              </div>
+              <div class="order-price">€1,199.00</div>
+            </div>
+            <div class="order-info">
+              <p><strong>Client :</strong> Jean Dupont</p>
+              <p><strong>Date :</strong> 15 Jan 2024</p>
+            </div>
+            <div class="order-items">
+              <div class="order-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span class="item-name">iPhone 15 Pro</span>
+                <span class="item-variant">128GB - Bleu</span>
+                <span class="item-qty">x1</span>
+                <span class="item-price">€1,199.00</span>
+              </div>
+            </div>
+            <div class="order-total">
+              <div class="coxe">
+                <a href="#popup-detail">Voir detail</a>
+                <!-- <button>VoirDeatille</button> -->
+                <input type="button" /><button>Modifier</button>
+                <button class="ex">Expedier</button>
+                <strong>Total :</strong> <span>€899.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-title">
+                <h3>Commande #CMD-2024-002</h3>
+                <span class="order-status processing">En cours</span>
+              </div>
+              <div class="order-price">€2,899.00</div>
+            </div>
+            <div class="order-info">
+              <p><strong>Client :</strong> Marie Martin</p>
+              <p><strong>Date :</strong> 14 Jan 2024</p>
+            </div>
+            <div class="order-items">
+              <div class="order-item">
+                <i class="fas fa-laptop"></i>
+                <span class="item-name">MacBook Pro 16"</span>
+                <span class="item-variant">M3 Pro</span>
+                <span class="item-qty">x1</span>
+                <span class="item-price">€2,899.00</span>
+              </div>
+            </div>
+            <div class="order-total">
+              <div class="coxe">
+                <button>VoirDetaille</button>
+                <input type="button" /><button>Modifier</button>
+                <button>Expedier</button>
+                <strong>Total :</strong> <span>€899.00</span>
+              </div>
+
+              <strong>Total :</strong> <span>€2,899.00</span>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-title">
+                <h3>Commande #CMD-2024-003</h3>
+                <span class="order-status shipped">Expédiée</span>
+              </div>
+              <div class="order-price">€899.00</div>
+            </div>
+            <div class="order-info">
+              <p><strong>Client :</strong> Pierre Dubois</p>
+              <p><strong>Date :</strong> 13 Jan 2024</p>
+            </div>
+            <div class="order-items">
+              <div class="order-item">
+                <i class="fas fa-tablet-alt"></i>
+                <span class="item-name">iPad Pro 11"</span>
+                <span class="item-variant">256GB</span>
+
+                <span class="item-qty">x1</span>
+                <span class="item-price">€899.00</span>
+              </div>
+            </div>
+            <div class="order-total">
+              <div class="coxe">
+                <button>VoirDetaille</button>
+                <input type="button" /><button>Modifier</button>
+                <button>Expedier</button>
+                <strong>Total :</strong> <span>€899.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-title">
+                <h3>Commande #CMD-2024-002</h3>
+                <span class="order-status processing">En cours</span>
+              </div>
+              <div class="order-price">€2,899.00</div>
+            </div>
+            <div class="order-info">
+              <p><strong>Client :</strong> Marie Martin</p>
+              <p><strong>Date :</strong> 14 Jan 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+<div id="popup-detail" class="popup-overlay">
+
+    <!-- clic extérieur -->
+    <a href="#" class="popup-close-area"></a>
+
+    <div class="popup-box">
+
+        <!-- HEADER -->
+        <div class="popup-header">
+            <div class="title-left">
+                <i class="fas fa-eye"></i>
+                <h2>Détails de la Commande</h2>
+            </div>
+
+            <a href="#" class="close-x">&times;</a>
+        </div>
+
+        <!-- Informations commande -->
+        <h3 class="section-title">Informations Commande</h3>
+        <div class="section-box">
+
+            <div class="row">
+                <div class="col">
+                    <p class="label">Numéro de commande :</p>
+                    <p class="value">Commande #CMD-2024-001</p>
+                </div>
+                <div class="col">
+                    <p class="label">Date de commande :</p>
+                    <p class="value">15 Jan 2024</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p class="label">Statut :</p>
+                    <p class="value">En attente</p>
+                </div>
+                <div class="col">
+                    <p class="label">Total :</p>
+                    <p class="value">€1,199.00</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Informations client -->
+        <h3 class="section-title">Informations Client</h3>
+        <div class="section-box">
+
+            <div class="row">
+                <div class="col">
+                    <p class="label">Nom :</p>
+                    <p class="value">Jean Dupont</p>
+                </div>
+                <div class="col">
+                    <p class="label">Email :</p>
+                    <p class="value">jean.dupont@email.com</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p class="label">Téléphone :</p>
+                    <p class="value">+33 6 12 34 56 78</p>
+                </div>
+                <div class="col">
+                    <p class="label">Adresse :</p>
+                    <p class="value">123 Rue de la Paix, 75001 Paris</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Articles commandés -->
+        <h3 class="section-title">Articles Commandés</h3>
+        <div class="section-box">
+
+            <div class="article">
+                <div class="article-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="article-info">
+                    <p class="value">iPhone 15 Pro - 128GB</p>
+                </div>
+                <div class="article-price">
+                    <p class="value">€1,199.00</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOUTON BAS -->
+        <div class="popup-buttons">
+            <a href="#" class="btn-close">Fermer</a>
+        </div>
+
+    </div>
+</div>
+
+  </body>
+</html>

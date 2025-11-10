@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapports - StockManager</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <i class="fas fa-chart-line"></i>
+        <h2>Dashboard</h2>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item">
+          <i class="fas fa-table"></i>
+          <span>Tableau de Bord</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <i class="fas fa-chart-bar"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="commandes.html" class="nav-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Commandes</span>
+        </a>
+        <a href="parametres.html" class="nav-item">
+          <i class="fas fa-cog"></i>
+          <span>Paramètres</span>
+        </a>
+        <a href="rapports.html" class="nav-item active">
+          <i class="fas fa-file-alt"></i>
+          <span>Rapports</span>
+        </a>
+        <a href="notifications.html" class="nav-item">
+          <i class="fas fa-bell"></i>
+          <span>Notifications</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="user-info">
+            <h4>Administrateur</h4>
+            <p>Gestionnaire</p>
+          </div>
+        </div>
+        <button class="btn-profile">
+          <i class="fas fa-user-circle"></i> Mon Profil
+        </button>
+        <button class="btn-logout">
+          <i class="fas fa-sign-out-alt"></i> Déconnexion
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Gestion de Stock - Produits Électroniques</h1>
+        <div class="header-right">
+          <div class="notification-icon">
+            <i class="fas fa-bell"></i>
+            <span class="badge">3</span>
+          </div>
+          <div class="user-menu">
+            <i class="fas fa-user-circle"></i>
+            <span>Administrateur</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Rapports Content -->
+      <div class="dashboard-content">
+        <div class="section-header">
+          <h2><i class="fas fa-file-alt"></i> Rapports & Analytics</h2>
+          <p>Génération et consultation des rapports détaillés</p>
+        </div>
+
+        <!-- Report Generator -->
+        <div class="report-generator">
+          <h3>Générer un rapport</h3>
+          <div class="generator-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Type de rapport :</label>
+                <select class="form-select">
+                  <option>Rapport des ventes</option>
+                  <option>Rapport des stocks</option>
+                  <option>Rapport des clients</option>
+                  <option>Rapport financier</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Période :</label>
+                <select class="form-select">
+                  <option>Ce mois</option>
+                  <option>Mois dernier</option>
+                  <option>Ce trimestre</option>
+                  <option>Cette année</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Format :</label>
+                <select class="form-select">
+                  <option>PDF</option>
+                  <option>Excel</option>
+                  <option>CSV</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="btn-primary">
+                  <i class="fas fa-file-download"></i> Générer le rapport
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="stats-grid">
+          <div class="stat-card blue">
+            <div class="start-content">
+              <div class="stat-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="stat-info">
+                <h3>€45,678</h3>
+                <p>Ventes du mois</p>
+                <span class="stat-change positive">+12.5%</span>
+                <small>vs mois dernier</small>
+              </div>
+            </div>
+            <button class="stat-button">Voir détails</button>
+          </div>
+
+          <div class="stat-card green">
+            <div class="start-content-2">
+                <div class="stat-icon">
+              <i class="fas fa-boxes"></i>
+            </div>
+            <div class="stat-info">
+              <h3>1,234</h3>
+              <p>État du stock</p>
+              <div class="stat-details">
+                <span>Articles en stock</span>
+                <span class="detail-value">23</span>
+                <span>Stock faible</span>
+              </div>
+            </div>
+            </div>
+            <button class="stat-button">Voir détails</button>
+          </div>
+
+          <div class="stat-card orange">
+            <div class="start-content-3">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-info">
+              <h3>856</h3>
+              <p>Clients</p>
+              <div class="stat-details">
+                <span>Nouveaux clients</span>
+                <span class="detail-value">2,345</span>
+                <span>Total clients</span>
+              </div>
+            </div>
+            </div>
+            <button class="stat-button">Voir détails</button>
+          </div>
+        </div>
+
+        <!-- Report History -->
+        <div class="report-history">
+          <h3><i class="fas fa-history"></i> Historique des Rapports</h3>
+
+          <div class="history-list">
+            <div class="history-item">
+              <div class="history-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="history-info">
+                <h4>Rapport des ventes - Janvier 2024</h4>
+                <p>Généré le 15 Jan 2024 à 14:30</p>
+              </div>
+              <div class="history-actions">
+                <button class="btn-icon-sm download">
+                  <i class="fas fa-download"></i>
+                </button>
+                <button class="btn-icon-sm view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn-icon-sm delete">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="history-item">
+              <div class="history-icon excel">
+                <i class="fas fa-file-excel"></i>
+              </div>
+              <div class="history-info">
+                <h4>Rapport des stocks - Décembre 2023</h4>
+                <p>Généré le 28 Déc 2023 à 09:15</p>
+              </div>
+              <div class="history-actions">
+                <button class="btn-icon-sm download">
+                  <i class="fas fa-download"></i>
+                </button>
+                <button class="btn-icon-sm view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn-icon-sm delete">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="history-item">
+              <div class="history-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="history-info">
+                <h4>Rapport financier - Q4 2023</h4>
+                <p>Généré le 20 Déc 2023 à 16:45</p>
+              </div>
+              <div class="history-actions">
+                <button class="btn-icon-sm download">
+                  <i class="fas fa-download"></i>
+                </button>
+                <button class="btn-icon-sm view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn-icon-sm delete">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
